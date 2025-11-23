@@ -142,23 +142,37 @@
     }
 
     /* Parent container */
-  .two-column {
+  .two-column1 {
     display: flex;         /* makes children sit side by side */
     gap: 20px;             /* space between the two divs */
   }
 
-  .two-column .box {
+  .two-column2 {
+    display: flex;         /* makes children sit side by side */
+    gap: 20px;             /* space between the two divs */
+  }
+
+  .two-column1 .box1 {
     flex: 1;
   }
     /* Mobile: stack vertically */
   @media (max-width: 768px) {
-      .two-column {
+      .two-column1 {
           flex-direction: column;
       }
   }
 
   /* Each div */
-  .box {
+  .box1 {
+    flex: 1;               /* makes both boxes equal width */
+    background: #4c66af;
+    color: white;
+    padding: 40px;
+    text-align: center;
+    border-radius: 10px;
+  }
+
+  .box2 {
     flex: 1;               /* makes both boxes equal width */
     background: #4c66af;
     color: white;
@@ -194,21 +208,35 @@
 <div id="sections-wrapper">
     <!-- Home Section -->
     <div id="home" class="section-content">
-        <div class="content-wrapper">
-            <img src="public/Logo-1.1.png" alt="Home Image">
-            <p>At Photonae Media, we focus on and specialize in <strong>3D modeling</strong>, <strong>animation</strong>, and <strong>visual effects</strong>.</p>
-            <p>Creating that final edit for a commercial or social media ad can be very challenging when you don't have the right tools and workflow.</p>
-            <p>And so, employing a fresh approach utilizing state-of-the-art 3D modeling, rendering and animation software is how we deliver insurmountable quality with every render or design.</p>
-            <p>Every pixel we craft is built with passion, purpose, and a touch of start-up fire.</p>
-            <video style="border-top: 10px;" width="600" height="400" controls loop>
-                <source src="public/video6.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <br>
-            <h1>Our Products</h1>
-            <p>We provide tools to assist you the 3D modeler to create more realistic looking scenes and objects. Our <strong>image processing</strong> software is available for download <strong>free of charge</strong> and currently runs on <strong>Windows</strong> only.</p>
-            <p>We also provide a Blender 3D add-on that allows anyone to export a scene and render it to the web.</p>
-            <p>You can find out more about this on our products <a href="#products" data-target="2">Products</a> page.</p>
+        <div class="two-column2">
+            <div class="box2">
+                <div class="content-wrapper">
+                    <img src="public/Logo-1.1.png" alt="Home Image">
+                    <p>At Photonae Media, we focus on and specialize in <strong>3D modeling</strong>, <strong>animation</strong>, and <strong>visual effects</strong>.</p>
+                    <p>Creating that final edit for a commercial or social media ad can be very challenging when you don't have the right tools and workflow.</p>
+                    <p>And so, employing a fresh approach utilizing state-of-the-art 3D modeling, rendering and animation software is how we deliver insurmountable quality with every render or design.</p>
+                    <p>Every pixel we craft is built with passion, purpose, and a touch of start-up fire.</p>
+                    <video style="border-top: 10px;" width="600" height="400" controls loop>
+                        <source src="public/video6.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <br>
+                    <h1>Our Products</h1>
+                    <p>We provide tools to assist you the 3D modeler to create more realistic looking scenes and objects. Our <strong>image processing</strong> software is available for download <strong>free of charge</strong> and currently runs on <strong>Windows</strong> only.</p>
+                    <p>We also provide a Blender 3D add-on that allows anyone to export a scene and render it to the web.</p>
+                    <p>You can find out more about this on our products <a href="#products" data-target="2">Products</a> page.</p>
+                </div>
+            </div>
+            <div class="box2">
+                <footer">
+                        Created by Photonae Media, Copyright © 2025
+                    </footer>
+                    <br>
+                    <tr>
+                        <td><a href="#">Terms of Service</a></td>
+                        <td><a href="#">Privacy Policy</a></td>
+                    </tr>
+            </div>
         </div>
     </div>
 
@@ -223,64 +251,105 @@
 
     <!-- Products Section -->
     <div id="products" class="section-content">
-        <div class="content-wrapper">
-            <h1>Our Products</h1>
-            <div class="container-fluid">
-            <div class="two-column">
-                <div class="box">
-                    <h2>Norma™ - The Normal map creator</h2>
-                    <p>Norma™, the normal map creator desktop app for Windows allows anyone to quickly and easily create a normal map using any image. This allows the 3D designer and/or modeler to create highly realistic textures for their 3D models.<br>It is intended to save you countless hours of work, trying to model the perfect mesh and at the same time<br>preserve your system resources.</p>
-                    <p>To find out how to use the application, check out our<br><a href="./howto1.html">Norma™ How-to-guide</a></p>
-                    <img src="public/Logo-1.2.png" alt="Product Image">
-                    <br>
-                    <p>Click <a href="https://photonae.gumroad.com/l/qrqfbf">Here</a> to download Norma™ - The Normal map creator for Windows.</p>
-                </div>
-                <div class="box">
-                    <h2>Blend2Web™</h2>
-                    <p>Ever thought of rendering your 3D model to the web? Well now you can! Using our Blend2Web Blender 3D add-on, can you rapidly export your 3D model from your preferred 3d modeling software and host it on the web. </p>
-                    <p>To find out how to use the app, check out our tutorial : <br><a href="./howto2.html">Blend2Web™ How-to-guide</a></p>
-                    <img src="public/B2W-Logo1.1.png" alt="Product Image">
-                    <p>Click <a href="https://photonae.gumroad.com/l/gtrqdh">Here</a> to download the .zip file from Gumroad</p>
+        <div class="two-column2">
+            <div class="box2">
+                <div class="content-wrapper">
+                    <h1>Our Products</h1>
+                    <div class="container-fluid">
+                        <div class="two-column1">
+                            <div class="box1">
+                                <h2>Norma™ - The Normal map creator</h2>
+                                <p>Norma™, the normal map creator desktop app for Windows allows anyone to quickly and easily create a normal map using any image. This allows the 3D designer and/or modeler to create highly realistic textures for their 3D models.<br>It is intended to save you countless hours of work, trying to model the perfect mesh and at the same time<br>preserve your system resources.</p>
+                                <p>To find out how to use the application, check out our<br><a href="./howto1.html">Norma™ How-to-guide</a></p>
+                                <img src="public/Logo-1.2.png" alt="Product Image">
+                                <br>
+                                <p>Click <a href="https://photonae.gumroad.com/l/qrqfbf">Here</a> to download Norma™ - The Normal map creator for Windows.</p>
+                            </div>
+                            <div class="box1">
+                                <h2>Blend2Web™</h2>
+                                <p>Ever thought of rendering your 3D model to the web? Well now you can! Using our Blend2Web Blender 3D add-on, can you rapidly export your 3D model from your preferred 3d modeling software and host it on the web. </p>
+                                <p>To find out how to use the app, check out our tutorial : <br><a href="./howto2.html">Blend2Web™ How-to-guide</a></p>
+                                <img src="public/B2W-Logo1.1.png" alt="Product Image">
+                                <p>Click <a href="https://photonae.gumroad.com/l/gtrqdh">Here</a> to download the .zip file from Gumroad</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+            <div class="box2">
+                <footer">
+                        Created by Photonae Media, Copyright © 2025
+                    </footer>
+                    <br>
+                    <tr>
+                        <td><a href="#">Terms of Service</a></td>
+                        <td><a href="#">Privacy Policy</a></td>
+                    </tr>
             </div>
         </div>
     </div>
 
     <!-- Services Section -->
     <div id="services" class="section-content">
-        <div class="content-wrapper">
-            <h1>Services</h1>
-            <h2>3D Modeling</h2>
-            <p>We mainly focus on 3D modeling and animation. Our 3D modeling services covers object modeling for scenes as well as parametric design for signage and cnc routing.</p>
-            <video width="600" height="400" autoplay loop>
-                <source src="public/video3.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <h2>Animation</h2>
-            <p>We also do animation of 3D objects and can process an entire scene based on your requirement.</p>
-            <video width="600" height="400" autoplay loop muted>
-                <source src="public/video4.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <h2>VFX</h2>
-            <p>Our vfx services introduces the aspect of overlaying the 3D world with the real world. This allows us to create highly immersive experiences.</p>
-            <video width="600" height="400" autoplay loop>
-                <source src="public/video5.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+        <div class="two-column2">
+            <div class="box2">
+                <div class="content-wrapper">
+                    <h1>Services</h1>
+                    <h2>3D Modeling</h2>
+                    <p>We mainly focus on 3D modeling and animation. Our 3D modeling services covers object modeling for scenes as well as parametric design for signage and cnc routing.</p>
+                    <video width="600" height="400" autoplay loop>
+                        <source src="public/video3.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <h2>Animation</h2>
+                    <p>We also do animation of 3D objects and can process an entire scene based on your requirement.</p>
+                    <video width="600" height="400" autoplay loop muted>
+                        <source src="public/video4.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <h2>VFX</h2>
+                    <p>Our vfx services introduces the aspect of overlaying the 3D world with the real world. This allows us to create highly immersive experiences.</p>
+                    <video width="600" height="400" autoplay loop>
+                        <source src="public/video5.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+            <div class="box2">
+                <footer">
+                        Created by Photonae Media, Copyright © 2025
+                    </footer>
+                    <br>
+                    <tr>
+                        <td><a href="#">Terms of Service</a></td>
+                        <td><a href="#">Privacy Policy</a></td>
+                    </tr>
+            </div>
         </div>
     </div>
-
     <!-- Contact Section -->
     <div id="contact" class="section-content">
-        <div class="content-wrapper">
-            <h1>Contact Us</h1>
-            <p>Reach out to us for any inquiries or projects.</p>
-            <p><strong>Email:</strong> photonae@proton.me</p>
-            <p><strong>Contact No.:</strong> +2781 621 3575</p>
-            <p><i>CAPE TOWN</i></p>
-            <p><i>SOUTH AFRICA</i></p>
+        <div class="two-column2">
+            <div class="box2">
+                <div class="content-wrapper">
+                    <h1>Contact Us</h1>
+                    <p>Reach out to us for any inquiries or projects.</p>
+                    <p><strong>Email:</strong> photonae@proton.me</p>
+                    <p><strong>Contact No.:</strong> +2781 621 3575</p>
+                    <p><i>CAPE TOWN</i></p>
+                    <p><i>SOUTH AFRICA</i></p>
+                </div>
+            </div>
+            <div class="box2">
+                <footer">
+                        Created by Photonae Media, Copyright © 2025
+                    </footer>
+                    <br>
+                    <tr>
+                        <td><a href="#">Terms of Service</a></td>
+                        <td><a href="#">Privacy Policy</a></td>
+                    </tr>
+            </div>
         </div>
     </div>
 </div>
