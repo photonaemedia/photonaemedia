@@ -147,6 +147,16 @@
     gap: 20px;             /* space between the two divs */
   }
 
+  .two-column .box {
+    flex: 1;
+  }
+    /* Mobile: stack vertically */
+  @media (max-width: 768px) {
+      .two-column {
+          flex-direction: column;
+      }
+  }
+
   /* Each div */
   .box {
     flex: 1;               /* makes both boxes equal width */
