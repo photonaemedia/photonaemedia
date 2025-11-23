@@ -1,1 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<title>Photonae Media</title>
+<style>
+    html, body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Trebuchet MS', sans-serif;
+        height: 100%;
+        overflow-x: hidden; /* Prevent horizontal scroll */
+    }
 
+    h1 {
+        color: aqua;
+        text-shadow: 2px 2px 4px #FFE000;
+        text-align: center;
+        font-size: 4rem;
+        font-weight: bold;
+        color: transparent;
+        padding-top: 100px;
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 20%,rgba(255, 255, 255, 1) 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        background-size: 200% 100%;
+        background-position: -100% 0;
+        animation: reveal 5s linear infinite;
+    }
+
+    h2 {
+        color: aqua;
+        text-shadow: 2px 2px 4px #FFE000;
+        text-align: center;
+    }
+
+    p {
+        color: white;
+        text-align: center;
+    }
+
+
+    canvas {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+        z-index: -1; /* Behind content */
+    }
+
+    /* Navigation */
+    nav {
+        position: fixed;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10;
+        display: flex;
+        gap: 20px;
+    }
+    nav a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        background: rgba(0,0,0,0.5);
+        padding: 10px 20px;
+        border-radius: 5px;
+        transition: 0.3s;
+    }
+    nav a:hover {
+        background: rgba(255,255,255,0.3);
+    }
+
+    /* Sections wrapper for horizontal sliding */
+    #sections-wrapper {
+        display: flex;
+        transition: transform 1s ease;
+        pointer-events: none;
+        width: 500vw; /* 5 sections */
+    }
+
+    .section-content {
+        width: 100vw;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        color: white;
+        font-size: 1.2em;
+        text-shadow: 0 0 10px rgba(0,0,0,0.7);
+        flex-shrink: 0;
+        pointer-events: auto;
+        padding: 50px 20px;
+        padding-top: 100px;
+        box-sizing: border-box;
+    }
+
+    .content-wrapper {
+        background: rgba(0,0,0,0.5);
+        padding: 100px;
+        border-radius: 10px;
+        max-width: 1000px;
+        text-align: center;
+
+        /* Animation */
+        opacity: 0;
+        transform: translateY(50px);
+        transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .content-wrapper.active {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .content-wrapper img, .content-wrapper video {
+        max-width: 100%;
+        border-radius: 10px;
+        margin-top: 15px;
+    }
+
+    .content-wrapper form input, 
+    .content-wrapper form textarea, 
+    .content-wrapper form button {
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+        border-radius: 5px;
+        border: none;
+        font-size: 1em;
+    }
+
+    .content-wrapper form button {
+        background: #4c66af;
+        color: white;
+        cursor: pointer;
+    }
+
+    /* Parent container */
+  .two-column {
+    display: flex;         /* makes children sit side by side */
+    gap: 20px;             /* space between the two divs */
+  }
+
+  /* Each div */
+  .box {
+    flex: 1;               /* makes both boxes equal width */
+    background: #4c66af;
+    color: white;
+    padding: 40px;
+    text-align: center;
+    border-radius: 10px;
+  }
+
+  @keyframes reveal {
+                from {
+                    background-position: 100% 0;
+                }
+                to {
+                    background-position: -100% 0;
+                }
+            }
+    
+    .responsive-video {
+    width: 100%;
+    height: auto;
+    padding-top: 100px;
+    object-fit: cover;
+    justify-content: center;
+}
+</style>
+</head>
+<body oncontextmenu="return false">
+    <nav>
+        <a href="./index.html" data-target="2" style="color: aqua; text-shadow: 2px 2px 4px #FFE000;">Back</a>
+    </nav>
+  <h1>Photonae Media — Privacy Policy</h1>
+<p class="p"><strong>Last Updated:</strong> (Insert date)</p>
+
+<p class="p">This Privacy Policy explains how Photonae Media ("we", "our", "us") collects, uses, stores, and protects your information. By using our website or Services, you agree to the practices described in this Privacy Policy.</p>
+
+<h2>1. Information We Collect</h2>
+<h3>1.1 Information You Provide</h3>
+<p class="p">We may collect your name, email address, messages, purchase details, and any information you choose to provide when contacting us.</p>
+
+<h3>1.2 Automatically Collected Information</h3>
+<p class="p">We may collect anonymized or general data such as IP address, device information, browser type, and basic analytics data using cookies or similar technologies.</p>
+
+<h2>2. How We Use Your Information</h2>
+<p class="p">We use your information to operate and improve our Services, process purchases, provide customer support, ensure security, and comply with legal obligations.</p>
+
+<h2>3. How Your Data is Protected</h2>
+<p class="p">We implement reasonable technical measures to safeguard your data. However, no system is completely secure, and we cannot guarantee absolute protection.</p>
+
+<h2>4. Third-Party Services</h2>
+<p class="p">We may use third-party platforms for payments, analytics, and media hosting. These services have their own privacy policies. We are not responsible for their practices.</p>
+
+<h2>5. Cookies</h2>
+<p class="p">We use cookies to improve website performance and user experience. You may disable cookies in your browser, though some features may not function correctly.</p>
+
+<h2>6. Your Rights</h2>
+<p class="p">Depending on your region, you may have the right to access, delete, correct, or restrict the use of your personal data. To exercise these rights, contact us directly.</p>
+
+<h2>7. Data Retention</h2>
+<p class="p">Your information is retained only for as long as necessary to provide Services, fulfill legal requirements, or resolve disputes.</p>
+
+<h2>8. Children's Privacy</h2>
+<p class="p">Our Services are not intended for children under 13, or under the minimum age required by local law. We do not knowingly collect information from minors.</p>
+
+<h2>9. Changes to This Privacy Policy</h2>
+<p class="p">We may update this policy periodically. Continued use of the Services indicates acceptance of any changes.</p>
+
+<h2>10. Contact Information</h2>
+<p class="p">For privacy-related questions, contact us at: (insert email).</p>
+
+<!-- Babylon.js Canvas -->
+<canvas id="renderCanvas"></canvas>
+<script src="src/babylon.js"></script>
+<script src="src/main.js"></script>
+</body>
+
+</html>
