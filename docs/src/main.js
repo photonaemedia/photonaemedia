@@ -26,7 +26,7 @@ const createScene = () => {
 
     // Base emissive material (bright white)
     const baseMat = new BABYLON.StandardMaterial("starMat", scene);
-    baseMat.emissiveColor = new BABYLON.Color3(0, 0, 0);
+    baseMat.emissiveColor = new BABYLON.Color3(1, 1, 1);
     baseMat.disableLighting = true;
 
     const stars = [];
