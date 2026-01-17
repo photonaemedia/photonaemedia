@@ -3,7 +3,7 @@ const engine = new BABYLON.Engine(canvas, true);
 
 const createScene = () => {
     const scene = new BABYLON.Scene(engine);
-    scene.clearColor = new BABYLON.Color3.FromHexString("#0C0075"); // black background
+    scene.clearColor = new BABYLON.Color3.FromHexString("#000000"); // black background
 
     // Camera
     const camera = new BABYLON.ArcRotateCamera(
